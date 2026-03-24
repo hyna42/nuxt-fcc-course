@@ -5,6 +5,11 @@ const login = () => {
   console.log("hello");
   // navigateTo("/");
 };
+
+const  res = await useFetch('/api/hello')
+
+console.log("::res::",res)
+  
 </script>
 
 <template>
@@ -45,5 +50,6 @@ const login = () => {
         </form>
       </div>
     </div>
+
   </div>
 </template>

@@ -6,14 +6,20 @@ const login = () => {
   // navigateTo("/");
 };
 
-const  res = await useFetch('/api/hello')
+const res = await useFetch('/api/hello')
+const { data: products, pending} = await useLazyFetch('/api/products', {
+  transform:(_products)=>_products.data
+})
 
-console.log("::res::",res)
+console.log("products",products)
+
+// console.log("::res::",res)
   
 </script>
 
 <template>
   <div>
+    <p class="text-white">{{ pending ? 'Loading' : products }}</p>
     <p class="text-3xl font-bold underline text-red-400">Home Page</p>
     <!-- <Alert/> -->
     <pre>{{ sayHello() }}</pre>
@@ -50,6 +56,7 @@ console.log("::res::",res)
         </form>
       </div>
     </div>
+
 
   </div>
 </template>

@@ -6,20 +6,21 @@ const login = () => {
   // navigateTo("/");
 };
 
-const res = await useFetch('/api/hello')
-const { data: products, pending} = await useLazyFetch('/api/products', {
-  transform:(_products)=>_products.data
-})
+const { data: products, pending } = await useAsyncData("products", () =>
+  $fetch("/api/products"),
+);
 
-console.log("products",products)
+console.log("products", products);
+
+const refresh = () => refreshNuxtData("products");
 
 // console.log("::res::",res)
-  
 </script>
 
 <template>
   <div>
-    <p class="text-white">{{ pending ? 'Loading' : products }}</p>
+    <p class="">{{ pending ? "Loading" : products }}</p>
+    <button @click="refresh" type="button">Refresh</button>
     <p class="text-3xl font-bold underline text-red-400">Home Page</p>
     <!-- <Alert/> -->
     <pre>{{ sayHello() }}</pre>
@@ -56,7 +57,5 @@ console.log("products",products)
         </form>
       </div>
     </div>
-
-
   </div>
 </template>

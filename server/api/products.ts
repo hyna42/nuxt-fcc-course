@@ -1,9 +1,14 @@
-import data from "#server/products.json"
+// import data from "#server/products.json"
+let productCount = 0;
 
 export default defineEventHandler(async (event) => {
-    return new Promise<any>((resolve) => {
-        return setTimeout(() => {
-            resolve(data)
+    await new Promise<any>((resolve) => {
+        setTimeout(() => {
+            resolve(productCount++)
         }, 2000)
     })
+
+    return {
+        productCount
+    }
 })

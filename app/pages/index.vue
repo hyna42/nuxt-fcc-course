@@ -1,7 +1,7 @@
 <script setup lang="ts">
 ////SEO/////
 useHead({
-  title: "This is my homepage for Nuxt Course",
+  title: "Home Page",
   meta: [
     {
       name: "description",

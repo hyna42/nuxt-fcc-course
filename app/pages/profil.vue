@@ -4,7 +4,7 @@
 // });
 ////SEO/////
 useHead({
-  title: "Learn Nuxt.js with Our Comprehensive Course - Profile Page",
+  title: "Profil",
   meta: [
     {
       name: "description",

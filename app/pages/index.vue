@@ -1,4 +1,19 @@
 <script setup lang="ts">
+////SEO/////
+useHead({
+  title: "This is my homepage for Nuxt Course",
+  meta: [
+    {
+      name: "description",
+      content:
+        "page where you are going to find everything about this course of Nuxt.",
+    },
+  ],
+  bodyAttrs: { class: "test" },
+  script: [{ innerHTML: "console.log('Hello world')" }],
+});
+
+////SEO/////
 const { sayHello } = useUtils();
 
 const login = () => {

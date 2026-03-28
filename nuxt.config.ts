@@ -12,17 +12,17 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
-  app: {
-    head: {
-      title: 'FCC nuxt - course',
-      meta: [
-        {
-          name:"description",
-          content: "This is the repository for a course about Nuxt 3 for youtube",
-        },
+  // app: {
+  //   head: {
+  //     title: 'FCC nuxt - course',
+  //     meta: [
+  //       {
+  //         name:"description",
+  //         content: "This is the repository for a course about Nuxt 3 for youtube",
+  //       },
         
-      ]
-    },
+  //     ]
+  //   },
 
-  }
+  // }
 })

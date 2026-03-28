@@ -2,6 +2,19 @@
 // definePageMeta({
 //   layout: "custom",
 // });
+////SEO/////
+useHead({
+  title: "Learn Nuxt.js with Our Comprehensive Course - Profile Page",
+  meta: [
+    {
+      name: "description",
+      content:
+        "page where you are going to find everything about this course of Nuxt.",
+    },
+  ],
+  bodyAttrs: { class: "test" },
+  script: [{ innerHTML: "console.log('Hello world')" }],
+});
 </script>
 
 <template>

@@ -1,9 +1,6 @@
 <script setup lang="ts">
 useHead({
-  titleTemplate: (titleChunk) => {
-    console.log("tc:", titleChunk);
-    return titleChunk ? `${titleChunk} - Site Title` : "Site Title";
-  },
+  titleTemplate: "%s - Site Title",
 });
 </script>
 

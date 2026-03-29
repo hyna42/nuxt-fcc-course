@@ -21,6 +21,10 @@ const login = () => {
   // navigateTo("/");
 };
 
+const config = useRuntimeConfig();
+console.log("runtime API_URL", config.public.apiUrl);
+console.log("runtime SECRET_KEY", config.secretKey);
+
 const { data: products, pending } = await useAsyncData("products", () =>
   $fetch("/api/products"),
 );
